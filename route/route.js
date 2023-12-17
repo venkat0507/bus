@@ -9,9 +9,25 @@ const bcrypt = require("bcrypt");
 
 route.use(cookieParser());
 
-route.get("/", (req, res) => {
+route.get("/home", (req, res) => {
   res.render("loginregister");
 });
+route.get("/log", (req, res) => {
+  res.render("login");
+});
+route.get("/reg", (req, res) => {
+  res.render("registration");
+});
+route.get("/con", (req, res) => {
+  res.render("contact");
+});
+route.get("/", (req, res) => {
+  res.render("home");
+});
+route.get("/fea", (req, res) => {
+  res.render("features");
+});
+
 
 route.post("/register", async (req, res) => {
   try {
@@ -29,7 +45,8 @@ route.post("/register", async (req, res) => {
     await user.save();
     console.log("User saved:", user);
     req.session.userId = user._id;
-    res.redirect("/dashboard");
+    const url = `/${user._id}/dashboard`;
+    res.redirect(url);
   } catch (error) {
     console.error("Error during registration:", error);
     res.render("loginregister");
