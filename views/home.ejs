@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Bus Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 6px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            max-width: 40px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        nav a.active {
+            background-color: #555;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top:20px; /* Adjust this value to provide space between header and login container */
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        h1 {
+            font-family: "Times New Roman", Times, serif;
+            vertical-align: left;
+            font-size: 25px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+        }
+
+        .features-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            flex: 1;
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .cta-button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Bus Tracker Logo">
+
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/fea">Features</a></li>
+                <li><a href="/log"class="active">Login</a></li>
+                <li><a href="/con">Contact Us</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <div class="home-container">
+
+        <h1>Welcome to CMRCET Bus Tracker </h1>
+        <p>Track and manage your bus journeys with ease. Our bus tracker application provides real-time information,
+            user-friendly interfaces, and powerful features to enhance your commuting experience.</p>
+
+        <div class="features-container">
+            <div class="feature">
+                <h2>Real-Time Tracking</h2>
+                <p>Track the location of buses in real-time on an interactive map.</p>
+            </div>
+
+            <div class="feature">
+                <h2>Route Information</h2>
+                <p>Get detailed information about bus routes, stops, and schedules.</p>
+            </div>
+
+            <div class="feature">
+                <h2>Alerts & Notifications</h2>
+                <p>Receive alerts and notifications for delays, changes, and important announcements.</p>
+            </div>
+        </div>
+
+        <a href="/reg" class="cta-button">registration</a>
+    </div>
+
+
+<footer>
+    &copy; 2023 Bus Tracker. All rights reserved.
+</footer>
+</body>
+
+</html>
