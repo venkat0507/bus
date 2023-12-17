@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container mt-5">
+      <div class="row">
+          <div class="col-md-6 mx-auto p-0">
+              <div class="login-box card bg-transparent shadow-lg">
+                  <div class="login-snip">
+                    <div class="text-center">
+                        <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+                        <label for="tab-1" class="tab">Login</label>
+                        <input id="tab-2" type="radio" name="tab" class="sign-up">
+                        <label for="tab-2" class="tab">Sign Up</label>
+                    </div>
+
+                      <div class="login-space">
+                          <div class="login-form">
+                            <form action="/login" method="POST">
+                                <div class="login">
+                                    <div class="group">
+                                        <label for="email" class="label">Email</label>
+                                        <input id="email" name="email" type="email" class="input"
+                                            placeholder="Enter email">
+                                    </div>
+
+                                    <div class="group">
+                                        <label for="password" class="label">Password</label>
+                                        <input id="password" name="password" type="password" class="input"
+                                            placeholder="Enter password">
+                                    </div>
+                                    <div class="text-center mt-4">
+                                        <button type="submit" class="btn btn-primary">SUBMIT</button>
+                                    </div>
+                                    <div class="hr"></div>
+                                </div>
+                            </form>
+                          </div>
+
+                          <div class="sign-up-form">
+                            <form action="/register" method="POST">
+                              <div class="registration">
+                                  <div class="group">
+                                      <label for="username" class="label">Username</label>
+                                      <input id="username" name="username" type="text" class="input"
+                                          placeholder="Enter username">
+                                  </div>
+                                  <div class="group">
+                                      <label for="email" class="label">Email</label>
+                                      <input id="email" name="email" type="email" class="input"
+                                          placeholder="Enter email">
+                                  </div>
+                                  <div class="group">
+                                      <label for="password" class="label">Password</label>
+                                      <input id="password" name="password" type="password" class="input"
+                                          placeholder="Enter password">
+                                  </div>
+                                  <div class="text-center mt-4">
+                                      <button type="submit" class="btn btn-primary">REGISTER</button>
+                                  </div>
+                              </div>
+                          </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+
+    <!-- footer start -->
+    <footer id="footer" class="mt-2 fixed-bottom border">
+        <div class="container p-2 text-center justify-content-center align-items-center">
+            <div class="copyright justify-content-center align-items-center text-white">
+                &copy; Copyright <strong><span>My Mental Wellness</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits align-items-center justify-content-center  text-white">
+                Designed by <a href="https://bootstrapmade.com/">Bootstrap</a> and <a href="#">My Mental Wellness</a>
+            </div>
+        </div> 
+    </footer>
+    <!-- End Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+        <script>
+          // Get the radio buttons
+          const signInRadio = document.querySelector(".sign-in");
+          const signUpRadio = document.querySelector(".sign-up");
+          const loginForm = document.querySelector(".login-form");
+          const signUpForm = document.querySelector(".sign-up-form");
+  
+          // Add event listener to the radio buttons
+          signInRadio.addEventListener("change", () => {
+              if (signInRadio.checked) {
+                  loginForm.style.display = "block";
+                  signUpForm.style.display = "none";
+              }
+          });
+  
+          signUpRadio.addEventListener("change", () => {
+              if (signUpRadio.checked) {
+                  loginForm.style.display = "none";
+                  signUpForm.style.display = "block";
+              }
+          });
+      </script>
+</body>
+
+</html>
+
